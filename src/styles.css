@@ -1,0 +1,206 @@
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+}
+
+/* Main Container */
+
+.container,
+.setup-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* Heading */
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: gray;
+  margin-bottom: 25px;
+}
+
+/* Cards */
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Summary Grid */
+
+.summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 20px;
+
+  margin-top: 20px;
+}
+
+.summary-grid .card {
+  text-align: center;
+}
+
+.summary-grid h3 {
+  margin-bottom: 10px;
+}
+
+.summary-grid p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Inputs */
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  border-radius: 10px;
+  border: 1px solid #ccc;
+
+  font-size: 15px;
+}
+
+/* Buttons */
+
+button {
+  margin-top: 12px;
+
+  padding: 12px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  background: #4f46e5;
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Transactions */
+
+.transaction {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background: #f8f9fc;
+
+  margin-top: 10px;
+}
+
+.transaction button {
+  margin-left: 15px;
+  background: crimson;
+}
+
+/* Charts */
+
+canvas {
+  max-height: 400px;
+}
+
+/* Budget Alerts */
+
+.alert-red {
+  color: red;
+  font-weight: bold;
+}
+
+.alert-orange {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Dark Mode */
+
+.dark {
+  background: #121212;
+  color: white;
+  min-height: 100vh;
+}
+
+.dark .card {
+  background: #1f1f1f;
+  color: white;
+}
+
+.dark input,
+.dark select {
+  background: #2b2b2b;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark .transaction {
+  background: #2a2a2a;
+}
+
+.dark button {
+  background: #6366f1;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .container,
+  .setup-container {
+    padding: 15px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
